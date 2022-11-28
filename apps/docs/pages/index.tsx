@@ -1,9 +1,17 @@
 import { Button } from "ui";
+import type ASD from "./index.types";
 
-export default function Docs() {
+export default function Web() {
+  const asd: ASD = {
+    dummy: "asd",
+  };
+  console.log(asd);
+
   return (
     <div>
-      <h1>Only docs chnage</h1>
+      {["1", "2", "3"].map((item) => (
+        <div>{item}</div>
+      ))}
       <Button />
     </div>
   );
