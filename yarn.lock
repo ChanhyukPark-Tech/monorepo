@@ -1098,6 +1098,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"config@*, config@workspace:packages/config":
+  version: 0.0.0-use.local
+  resolution: "config@workspace:packages/config"
+  languageName: unknown
+  linkType: soft
+
 "confusing-browser-globals@npm:^1.0.10":
   version: 1.0.11
   resolution: "confusing-browser-globals@npm:1.0.11"
@@ -1229,11 +1235,11 @@ __metadata:
     "@types/node": ^17.0.12
     "@types/react": ^18.0.22
     "@types/react-dom": ^18.0.7
+    config: "*"
     eslint: 7.32.0
     next: 13.0.0
     react: ^18.2.0
     react-dom: ^18.2.0
-    tsconfig: "*"
     typescript: ^4.5.3
     ui: "*"
   languageName: unknown
@@ -3423,12 +3429,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsconfig@*, tsconfig@workspace:packages/tsconfig":
-  version: 0.0.0-use.local
-  resolution: "tsconfig@workspace:packages/tsconfig"
-  languageName: unknown
-  linkType: soft
-
 "tslib@npm:^1.8.1":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
@@ -3591,9 +3591,9 @@ __metadata:
   dependencies:
     "@types/react": ^17.0.37
     "@types/react-dom": ^17.0.11
+    config: "*"
     eslint: ^7.32.0
     react: ^18.2.0
-    tsconfig: "*"
     typescript: ^4.5.2
   languageName: unknown
   linkType: soft
@@ -3648,9 +3648,9 @@ __metadata:
   dependencies:
     "@types/react": ^17.0.37
     "@types/react-dom": ^17.0.11
+    config: "*"
     eslint: ^7.32.0
     react: ^18.2.0
-    tsconfig: "*"
     typescript: ^4.5.2
   languageName: unknown
   linkType: soft
@@ -3670,10 +3670,10 @@ __metadata:
     "@types/node": ^17.0.12
     "@types/react": ^18.0.22
     "@types/react-dom": ^18.0.7
+    config: "*"
     next: 13.0.0
     react: ^18.2.0
     react-dom: ^18.2.0
-    tsconfig: "*"
     typescript: ^4.5.3
     ui: "*"
     utils: "*"

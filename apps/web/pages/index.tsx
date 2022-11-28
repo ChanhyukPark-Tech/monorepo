@@ -1,13 +1,7 @@
 import { Button } from "ui";
 import { Adder } from "utils";
-import type ASD from "./index.types";
 
 export default function Web() {
-  const asd: ASD = {
-    dummy: "asd",
-  };
-  console.log(asd);
-
   return (
     <div>
       나는 찬혁이야.

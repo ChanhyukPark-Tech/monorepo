@@ -24,8 +24,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:apps/web"\
       },\
       {\
-        "name": "tsconfig",\
-        "reference": "workspace:packages/tsconfig"\
+        "name": "config",\
+        "reference": "workspace:packages/config"\
       },\
       {\
         "name": "ui",\
@@ -39,8 +39,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
+      ["config", ["workspace:packages/config"]],\
       ["docs", ["workspace:apps/docs"]],\
-      ["tsconfig", ["workspace:packages/tsconfig"]],\
       ["turborepo-tutorial", ["workspace:."]],\
       ["ui", ["workspace:packages/ui"]],\
       ["utils", ["workspace:packages/utils"]],\
@@ -1417,6 +1417,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["config", [\
+        ["workspace:packages/config", {\
+          "packageLocation": "./packages/config/",\
+          "packageDependencies": [\
+            ["config", "workspace:packages/config"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
       ["confusing-browser-globals", [\
         ["npm:1.0.11", {\
           "packageLocation": "./.yarn/cache/confusing-browser-globals-npm-1.0.11-b3ff8e9483-3afc635abd.zip/node_modules/confusing-browser-globals/",\
@@ -1605,11 +1614,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:17.0.45"],\
             ["@types/react", "npm:18.0.25"],\
             ["@types/react-dom", "npm:18.0.9"],\
+            ["config", "workspace:packages/config"],\
             ["eslint", "npm:7.32.0"],\
             ["next", "virtual:ba56dc173c7ece72e1480aefcd1d10cda1629de2daa7f61b603fae838675c08883d872a9392eb3e84cc530eed79a8c2786d69c2798b8351fc0bd584f41a8d550#npm:13.0.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:ba56dc173c7ece72e1480aefcd1d10cda1629de2daa7f61b603fae838675c08883d872a9392eb3e84cc530eed79a8c2786d69c2798b8351fc0bd584f41a8d550#npm:18.2.0"],\
-            ["tsconfig", "workspace:packages/tsconfig"],\
             ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"],\
             ["ui", "workspace:packages/ui"]\
           ],\
@@ -4206,15 +4215,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["tsconfig", [\
-        ["workspace:packages/tsconfig", {\
-          "packageLocation": "./packages/tsconfig/",\
-          "packageDependencies": [\
-            ["tsconfig", "workspace:packages/tsconfig"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
       ["tsconfig-paths", [\
         ["npm:3.14.1", {\
           "packageLocation": "./.yarn/cache/tsconfig-paths-npm-3.14.1-17a815b5c5-8afa01c673.zip/node_modules/tsconfig-paths/",\
@@ -4411,9 +4411,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ui", "workspace:packages/ui"],\
             ["@types/react", "npm:17.0.52"],\
             ["@types/react-dom", "npm:17.0.18"],\
+            ["config", "workspace:packages/config"],\
             ["eslint", "npm:7.32.0"],\
             ["react", "npm:18.2.0"],\
-            ["tsconfig", "workspace:packages/tsconfig"],\
             ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
           ],\
           "linkType": "SOFT"\
@@ -4495,9 +4495,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["utils", "workspace:packages/utils"],\
             ["@types/react", "npm:17.0.52"],\
             ["@types/react-dom", "npm:17.0.18"],\
+            ["config", "workspace:packages/config"],\
             ["eslint", "npm:7.32.0"],\
             ["react", "npm:18.2.0"],\
-            ["tsconfig", "workspace:packages/tsconfig"],\
             ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
           ],\
           "linkType": "SOFT"\
@@ -4521,10 +4521,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:17.0.45"],\
             ["@types/react", "npm:18.0.25"],\
             ["@types/react-dom", "npm:18.0.9"],\
+            ["config", "workspace:packages/config"],\
             ["next", "virtual:ba56dc173c7ece72e1480aefcd1d10cda1629de2daa7f61b603fae838675c08883d872a9392eb3e84cc530eed79a8c2786d69c2798b8351fc0bd584f41a8d550#npm:13.0.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:ba56dc173c7ece72e1480aefcd1d10cda1629de2daa7f61b603fae838675c08883d872a9392eb3e84cc530eed79a8c2786d69c2798b8351fc0bd584f41a8d550#npm:18.2.0"],\
-            ["tsconfig", "workspace:packages/tsconfig"],\
             ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"],\
             ["ui", "workspace:packages/ui"],\
             ["utils", "workspace:packages/utils"]\
