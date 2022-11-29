@@ -21,6 +21,7 @@
     "@types/react-dom": "^18.0.7",
     "config": "*",
     "eslint": "7.32.0",
+    "nextConfig": "*",
     "typescript": "^4.5.3"
   }
 }

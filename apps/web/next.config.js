@@ -1,6 +1,1 @@
-module.exports = {
-  reactStrictMode: true,
-  experimental: {
-    transpilePackages: ["ui"],
-  },
-};
+module.exports = require("nextConfig/next.config");
